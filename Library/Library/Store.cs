@@ -53,5 +53,10 @@ namespace Library
             return Movies.Remove(movie);
         }
 
+        public IEnumerable<Movie> GetMoviesByName(string Title)
+        {
+            return Movies.Where(x => x.Title.Contains(Title));
+        }
+
     }
 }
